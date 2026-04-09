@@ -23,7 +23,8 @@ body {
 
 h1 {
   text-align: center;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
   color: #0077cc;
 }
 
@@ -38,7 +39,7 @@ h1 {
   font-family: 'Poppins';
   color: #0077cc;
   font-size: 1.4rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .book-top {
@@ -48,6 +49,7 @@ h1 {
 
 .book-images img {
   width: 140px;
+  cursor: pointer;
 }
 
 .book-content {
@@ -56,23 +58,28 @@ h1 {
 
 .book-tagline {
   font-style: italic;
-  color: #1d4ed8;
   margin-bottom: 10px;
+  color: #1d4ed8;
 }
 
-/* ✅ NAVY BLUE (FINAL FIX) */
 .book-desc {
-  color: #1e3a8a;
   margin-bottom: 10px;
+  color: #1e3a8a;
 }
 
 .book-highlight {
-  color: #005fcc;
   font-weight: 600;
+  color: #005fcc;
+  margin-top: 10px;
 }
 
 .availability {
+  margin-top: 5px;
   color: #2563eb;
+}
+
+.buttons {
+  margin-top: 10px;
 }
 
 .button {
@@ -81,8 +88,9 @@ h1 {
   padding: 8px 14px;
   background: #0077cc;
   color: white;
-  border-radius: 20px;
   text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
 .button.secondary {
@@ -90,7 +98,39 @@ h1 {
   color: #1e293b;
 }
 
-@media(max-width:700px){
+.coming {
+  text-align: center;
+  color: #2563eb;
+}
+
+.coming h3 {
+  color: #0077cc;
+}
+
+.coming p {
+  color: #3b82f6;
+}
+
+.coming img {
+  width: 180px;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.8);
+  justify-content:center;
+  align-items:center;
+}
+
+.lightbox img {
+  max-width:90%;
+  max-height:90%;
+}
+
+@media (max-width:700px){
   .book-top { flex-direction: column; }
 }
 </style>
@@ -102,140 +142,235 @@ h1 {
 
 <h1>Rish Narula – Author Journey</h1>
 
+<!-- Coming Soon -->
+<div class="section-card coming">
+  <img src="images/coming_soon_vertical.jpg">
+  <h3>✨ New Book Coming Soon</h3>
+  <p>A new adventure is on its way…</p>
+</div>
+
 <!-- Grade 3 -->
 <div class="section-card">
-<div class="section-strip">Grade 3 (2024) — The Lost Kids</div>
+  <div class="section-strip">Grade 3 (2024) — The Lost Kids</div>
 
-<div class="book-top">
-<div class="book-images">
-<img src="images/lost_kids_cover.jpg">
-<img src="images/lost_kids_back.jpg">
-</div>
+  <div class="book-top">
+    <div class="book-images">
+      <img src="images/lost_kids_cover.jpg" onclick="openLightbox(this.src)">
+      <img src="images/lost_kids_back.jpg" onclick="openLightbox(this.src)">
+    </div>
 
-<div class="book-content">
-<div class="book-tagline">A thrilling story of adventure, teamwork, and courage.</div>
+    <div class="book-content">
+      <div class="book-tagline">
+        A magical journey of courage, friendship, and helping others unfolds beyond the ocean.
+      </div>
 
-<div class="book-desc">
-This story follows a group of children who find themselves in an unexpected situation and must work together to find their way.
-</div>
+      <div class="book-desc">
+        The Royal Group—Princess Mia, Prince Ethan, the Witch, the Unicorn, the Fairy, and the Dog—returns for a new adventure in a mysterious land beyond the ocean.
+      </div>
 
-<div class="book-desc">
-Along the way, they discover bravery, friendship, and belief in themselves.
-</div>
-</div>
-</div>
+      <div class="book-desc">
+        As the Water Queen’s kingdom faces danger from her own sister, they step forward to help—discovering bravery, teamwork, and kindness along the way.
+      </div>
+    </div>
+  </div>
 
-<div class="book-highlight">Written and illustrated digitally by Rish</div>
+  <div class="book-highlight">
+    Written and illustrated digitally by Rish
+  </div>
 
-<a href="https://a.co/d/07DHittX" class="button">Amazon Global</a>
-<a href="https://youtu.be/wWCOQ-SV050?si=Kv6pmVt9Tro-ZMr0" class="button">Watch Video</a>
+  <div class="availability">
+    Available in paperback across India and internationally.
+  </div>
+
+  <div class="buttons">
+    <a href="#" class="button" target="_blank">Amazon India</a>
+    <a href="https://a.co/d/07DHittX" class="button" target="_blank">Amazon Global</a>
+    <a href="samples/lost_kids_sample.pdf" class="button secondary" target="_blank">Read Sample</a>
+    <a href="https://youtu.be/wWCOQ-SV050?si=Kv6pmVt9Tro-ZMr0" class="button" target="_blank">Watch Video</a>
+  </div>
 </div>
 
 <!-- Grade 2 -->
 <div class="section-card">
-<div class="section-strip">Grade 2 (2023) — Max and Lily Love Stars</div>
+  <div class="section-strip">Grade 2 (2023) — Max and Lily Love Stars</div>
 
-<div class="book-top">
-<div class="book-images">
-<img src="images/max_lily_cover.jpg">
-<img src="images/max_lily_back.jpg">
+  <div class="book-top">
+    <div class="book-images">
+      <img src="images/max_lily_cover.jpg" onclick="openLightbox(this.src)">
+      <img src="images/max_lily_back.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <div class="book-content">
+      <div class="book-tagline">
+  A magical adventure across uncharted realms beyond the galaxy, filled with kindness, courage, and wonder.
 </div>
-
-<div class="book-content">
-<div class="book-tagline">A joyful story about dreams and imagination.</div>
 
 <div class="book-desc">
-Max and Lily explore the magic of stars and discover the beauty of curiosity and wonder.
-</div>
-</div>
+  This imaginative story follows a curious princess and her brother, a prince, as they journey beyond the galaxy, meeting unicorns, fairies, and witches along the way.
 </div>
 
-<div class="book-highlight">Written and illustrated by Rish</div>
+<div class="book-desc">
+  As challenges arise, the journey shows how positive thinking, kindness, and faith in one another can help overcome even the most difficult obstacles.
+</div>
+    </div>
+  </div>
 
-<a href="https://amzn.in/d/0hIRHo91" class="button">Amazon India</a>
-<a href="https://a.co/d/0eNgfFhJ" class="button">Amazon Global</a>
-<a href="https://youtu.be/t6OAOxgM45Y?si=4QpSw2KMc-RffHIL" class="button">Watch Video</a>
+  <div class="book-highlight">
+    Written and illustrated by Rish, with hand-drawn artwork.
+  </div>
+
+  <div class="availability">
+    Available internationally in paperback and Kindle formats, and in India as a Kindle edition.
+  </div>
+
+  <div class="buttons">
+    <a href="https://amzn.in/d/0hIRHo91" class="button" target="_blank">Amazon India</a>
+    <a href="https://a.co/d/0eNgfFhJ" class="button" target="_blank">Amazon Global</a>
+    <a href="samples/max_lily_sample.pdf" class="button secondary" target="_blank">Read Sample</a>
+    <a href="https://youtu.be/t6OAOxgM45Y?si=4QpSw2KMc-RffHIL" class="button" target="_blank">Watch Video</a>
+  </div>
 </div>
 
-<!-- Grade 1 -->
 <div class="section-card">
-<div class="section-strip">Grade 1 (2022) — Twilly explores the World</div>
+  <div class="section-strip">Grade 1 (2022) — Twilly explores the World</div>
 
-<div class="book-top">
-<div class="book-images">
-<img src="images/twilly_cover.jpg">
-<img src="images/twilly_back.jpg">
+  <div class="book-top">
+    <div class="book-images">
+      <img src="images/twilly_cover.jpg" onclick="openLightbox(this.src)">
+      <img src="images/twilly_back.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <div class="book-content">
+      <div class="book-tagline">
+        A heartwarming story of kindness, compassion, and the special bond between a girl and a dog.
+      </div>
+
+      <div class="book-desc">
+        This touching story follows Halley, a kind and caring girl who deeply loves animals and is always ready to help those in need.
+      </div>
+
+      <div class="book-desc">
+        One day, she comes across a wounded dog in search of care and companionship, leading to a friendship that brings joy to both of them and an unexpected turn in the story that follows.
+      </div>
+    </div>
+  </div>
+
+  <div class="book-highlight">
+    Written and illustrated digitally by Rish.
+  </div>
+
+  <div class="availability">
+    Available internationally, including in India, in Kindle edition.
+  </div>
+
+  <div class="buttons">
+    <a href="https://amzn.in/d/09BCMdSs" class="button" target="_blank">Amazon India</a>
+    <a href="https://a.co/d/0en6axUB" class="button" target="_blank">Amazon Global</a>
+    <a href="samples/twilly_sample.pdf" class="button secondary" target="_blank">Read Sample</a>
+  </div>
 </div>
 
-<div class="book-content">
-<div class="book-tagline">A fun story of curiosity and exploration.</div>
-
-<div class="book-desc">
-Twilly explores the world and learns new things along the way.
-</div>
-</div>
-</div>
-
-<div class="book-highlight">Written and illustrated digitally by Rish</div>
-
-<a href="https://amzn.in/d/09BCMdSs" class="button">Amazon India</a>
-<a href="https://a.co/d/0en6axUB" class="button">Amazon Global</a>
-</div>
-
-<!-- Kindergarten -->
 <div class="section-card">
-<div class="section-strip">Kindergarten — The Beginning ⭐⭐</div>
-
-<div class="section-strip" style="margin-top:15px;">The Fairyland</div>
-
-<div class="book-top">
-<div class="book-images">
-<img src="images/The_Fairyland_cover.jpg">
-<img src="images/The_Fairyland_back.jpg">
+ <div class="section-strip">
+  Kindergarten (2021) — The Beginning <span style="color:#0077cc;">⭐⭐</span>
 </div>
 
-<div class="book-content">
-<div class="book-tagline">A magical world of imagination and wonder begins.</div>
+  <div class="book-desc">
+    As soon as Rish began speaking clearly, his storytelling journey naturally began. He loved expressing his ideas and feelings, weaving beautiful little stories around everything he explored and narrating them with excitement.
+  </div>
 
-<div class="book-desc">
-One of Rish’s earliest creative expressions where imagination and storytelling first took shape.
+<div class="section-strip" style="margin: 25px 0 15px;">
+  The Bear and The Mouse
 </div>
+  <div class="book-top">
+    <div class="book-images">
+      <img src="images/bear_and_mouse_cover.jpg" onclick="openLightbox(this.src)">
+      <img src="images/bear_and_mouse_inside.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <div class="book-content">
+      <div class="book-tagline">
+        A gentle story of friendship between a bear and a mouse, celebrating kindness and helping others.
+      </div>
+
+      <div class="book-desc">
+        This book is his very first handmade creation — a heartfelt story he narrated in his own words and illustrated himself, while the story was lovingly written down as Rish was still learning to write.
+      </div>
+
+      <div class="book-desc">
+        This little book marked the beginning of his storytelling journey in written form, filled with imagination, creativity, and joy.
+      </div>
+    </div>
+  </div>
+
+  <div class="book-highlight">
+    Created and illustrated by Rish.
+  </div>
 </div>
-</div>
 
-<div class="book-highlight">Created and illustrated by Rish</div>
-
-<a href="https://amzn.in/d/0bcfA6A9" class="button">Amazon India</a>
-<a href="https://a.co/d/0eNgfFhJ" class="button">Amazon Global</a>
-<a href="#" class="button secondary">Read Sample</a>
-<a href="https://youtu.be/E3lwVBYxTMQ?si=F0prS6uGxlntLDl8" class="button">Watch Video</a>
-
-</div>
-
-<!-- Bear & Mouse -->
 <div class="section-card">
-<div class="section-strip">The Bear and the Mouse</div>
 
-<div class="book-top">
-<div class="book-images">
-<img src="images/bear_and_mouse_cover.jpg">
-<img src="images/bear_and_mouse_inside.jpg">
+  <div class="section-strip" style="margin: 2px 0 15px;">
+    The Fairyland
+  </div>
+
+  <div class="book-top">
+    <div class="book-images">
+      <img src="images/The_Fairyland_cover.jpg" onclick="openLightbox(this.src)">
+      <img src="images/The_Fairyland_back.jpg" onclick="openLightbox(this.src)">
+    </div>
+
+    <div class="book-content">
+
+      <div class="book-tagline">
+        A touching story of friendship between a young girl and her beloved pet, reflecting selfless love, compassion, and courage.
+      </div>
+
+      <div class="book-desc">
+        As Rish began learning to write, he took his next big step with <i>The Fairyland</i>. This was his first published book where he both wrote and illustrated the story himself — a proud milestone in his early author journey.
+      </div>
+
+      <div class="book-desc">
+        This story follows a young child and a magical world of imagination, adventure, and wonder, highlighting the creativity and confidence that began shaping his storytelling voice.
+      </div>
+
+    </div>
+  </div>
+
+  <div class="book-highlight">
+    Written and illustrated by Rish by hand.
+  </div>
+
+  <div class="availability">
+    Available internationally, including in India, in Kindle edition.
+  </div>
+
+  <div class="buttons">
+    <a href="https://amzn.in/d/0bcfA6A9" class="button" target="_blank">Amazon India</a>
+    <a href="https://a.co/d/0eNgfFhJ" class="button" target="_blank">Amazon Global</a>
+    <a href="samples/fairyland_sample.pdf" class="button secondary" target="_blank">Read Sample</a>
+    <a href="https://youtu.be/E3lwVBYxTMQ?si=F0prS6uGxlntLDl8" class="button" target="_blank">Watch Video</a>
+  </div>
+
+</div>
 </div>
 
-<div class="book-content">
-<div class="book-tagline">A gentle story of friendship and kindness.</div>
-
-<div class="book-desc">
-This handmade book reflects early storytelling, creativity, and imagination through simple yet meaningful ideas.
-</div>
-</div>
 </div>
 
-<div class="book-highlight">Created by Rish</div>
-
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
 </div>
 
-</div>
+<script>
+function openLightbox(src){
+  document.getElementById('lightbox').style.display='flex';
+  document.getElementById('lightbox-img').src=src;
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
+}
+</script>
 
 </body>
 </html>
