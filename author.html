@@ -28,7 +28,6 @@ h1 {
   color: #0077cc;
 }
 
-/* CARD */
 .section-card {
   background: #d6eaff;
   border-radius: 20px;
@@ -58,18 +57,18 @@ h1 {
   flex: 1;
 }
 
-/* TAGLINE (FIXED – brighter blue) */
+/* COLOR SYSTEM (LOCKED) */
 .book-tagline {
-  color: #1d4ed8; /* slightly deeper blue */
   font-style: italic;
+  margin-bottom: 10px;
+  color: #1d4ed8;
 }
 
-/* DESCRIPTION (FIXED – blue tone, not black/navy) */
 .book-desc {
-  color: #3b82f6; /* very close to availability, slightly lighter */
+  margin-bottom: 10px;
+  color: #3b82f6;
 }
 
-/* HIGHLIGHT */
 .book-highlight {
   font-weight: 600;
   color: #005fcc;
@@ -85,7 +84,6 @@ h1 {
   margin-top: 10px;
 }
 
-/* PRIMARY BUTTON */
 .button {
   display: inline-block;
   margin: 5px;
@@ -95,20 +93,18 @@ h1 {
   text-decoration: none;
   border-radius: 20px;
   font-size: 14px;
-  transition: 0.3s;
 }
 
 .button:hover {
   background: #005fa3;
 }
 
-/* SECONDARY BUTTON (FIXED – visible) */
+/* FIXED SAMPLE BUTTON */
 .button.secondary {
   background: #bcd9ff;
   color: #1e293b;
 }
 
-/* COMING SECTION TEXT FIXED */
 .coming {
   text-align: center;
   color: #2563eb;
@@ -126,7 +122,6 @@ h1 {
   width: 180px;
 }
 
-/* LIGHTBOX */
 .lightbox {
   display: none;
   position: fixed;
@@ -163,43 +158,50 @@ h1 {
 
 <!-- Grade 3 -->
 <div class="section-card">
-  <div class="section-strip">Grade 3 (2024) — Royal Adventures Beyond the Ocean</div>
+  <div class="section-strip">Grade 3 (2024) — The Lost Kids</div>
+</div>
+
+<!-- Grade 2 -->
+<div class="section-card">
+  <div class="section-strip">Grade 2 (2023) — Max and Lily Love Stars</div>
+</div>
+
+<!-- Grade 1 -->
+<div class="section-card">
+  <div class="section-strip">Grade 1 (2022) — Twilly explores the World</div>
+</div>
+
+<!-- Kindergarten -->
+<div class="section-card">
+  <div class="section-strip">
+    Kindergarten (2021) — The Beginning <span style="color:#0077cc;">💙💙</span>
+  </div>
+
+  <div class="section-strip" style="margin: 20px 0 10px;">
+    The Fairyland
+  </div>
 
   <div class="book-top">
     <div class="book-images">
-      <img src="images/royal_ocean_cover.jpg" onclick="openLightbox(this.src)">
-      <img src="images/royal_ocean_back.jpg" onclick="openLightbox(this.src)">
+      <img src="images/The_Fairyland_cover.jpg">
+      <img src="images/The_Fairyland_back.jpg">
     </div>
 
     <div class="book-content">
       <div class="book-tagline">
-        A magical journey of courage, friendship, and helping others unfolds beyond the ocean.
+        A magical world of imagination, friendship, and wonder begins to unfold.
       </div>
 
       <div class="book-desc">
-        The Royal Group returns for a new adventure in a mysterious land beyond the ocean.
-      </div>
-
-      <div class="book-desc">
-        As the Water Queen’s kingdom faces danger, they step forward to help—discovering bravery, teamwork, and kindness along the way.
+        This was one of Rish’s early creative expressions, where imagination took the lead and stories began to take shape in his mind.
       </div>
     </div>
   </div>
 
   <div class="book-highlight">
-    Written and illustrated digitally by Rish
+    Created and illustrated by Rish.
   </div>
 
-  <div class="availability">
-    Available in paperback across India and internationally.
-  </div>
-
-  <div class="buttons">
-    <a href="#" class="button">Amazon India</a>
-    <a href="#" class="button">Amazon Global</a>
-    <a href="#" class="button secondary">Read Sample</a>
-    <a href="#" class="button">Watch Video</a>
-  </div>
 </div>
 
 </div>
