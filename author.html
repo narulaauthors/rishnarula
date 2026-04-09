@@ -11,8 +11,8 @@
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
-  background: linear-gradient(to bottom, #d9efff, #cfe6ff); /* refined from homepage */
-  color: #0f172a;
+  background: linear-gradient(to bottom, #eaf4ff, #dff0ff); /* lighter page */
+  color: #1e293b;
 }
 
 .container {
@@ -28,12 +28,13 @@ h1 {
   color: #0077cc;
 }
 
+/* BOOK CARDS - darker than background */
 .section-card {
-  background: #e8f4ff;
-  border-radius: 18px;
+  background: #d6eaff;
+  border-radius: 20px;
   margin: 40px 0;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 
 .section-strip {
@@ -57,30 +58,36 @@ h1 {
   flex: 1;
 }
 
+/* TAGLINE */
 .book-tagline {
   font-style: italic;
   margin-bottom: 10px;
   color: #1e3a8a;
 }
 
+/* DESCRIPTION TEXT */
 .book-desc {
   margin-bottom: 10px;
+  color: #334e7d;
 }
 
+/* HIGHLIGHT LINE (FIXED - brighter) */
 .book-highlight {
   font-weight: 600;
-  color: #005fa3;
+  color: #005fcc;
   margin-top: 10px;
 }
 
 .availability {
   margin-top: 5px;
+  color: #3b5c8a;
 }
 
 .buttons {
   margin-top: 10px;
 }
 
+/* PRIMARY BUTTON */
 .button {
   display: inline-block;
   margin: 5px;
@@ -97,11 +104,13 @@ h1 {
   background: #005fa3;
 }
 
+/* SECONDARY BUTTON (FIXED VISIBILITY) */
 .button.secondary {
-  background: #cfe6ff;
-  color: #0f172a;
+  background: #c6dcff;
+  color: #1e293b;
 }
 
+/* COMING */
 .coming {
   text-align: center;
 }
@@ -110,6 +119,7 @@ h1 {
   width: 180px;
 }
 
+/* LIGHTBOX */
 .lightbox {
   display: none;
   position: fixed;
@@ -175,47 +185,6 @@ h1 {
 
   <div class="availability">
     Available in paperback across India and internationally.
-  </div>
-
-  <div class="buttons">
-    <a href="#" class="button">Amazon India</a>
-    <a href="#" class="button">Amazon Global</a>
-    <a href="#" class="button secondary">Read Sample</a>
-    <a href="#" class="button">Watch Video</a>
-  </div>
-</div>
-
-<!-- Grade 2 -->
-<div class="section-card">
-  <div class="section-strip">Grade 2 (2023) — Royal Adventures Beyond the Galaxy</div>
-
-  <div class="book-top">
-    <div class="book-images">
-      <img src="images/royal_galaxy_cover.jpg" onclick="openLightbox(this.src)">
-      <img src="images/royal_galaxy_back.jpg" onclick="openLightbox(this.src)">
-    </div>
-
-    <div class="book-content">
-      <div class="book-tagline">
-        A magical adventure across uncharted realms beyond the galaxy, filled with kindness, courage, and wonder.
-      </div>
-
-      <div class="book-desc">
-        This imaginative story follows a young explorer on a journey beyond the galaxy.
-      </div>
-
-      <div class="book-desc">
-        Along the way, lessons of kindness, courage, and belief help overcome challenges.
-      </div>
-    </div>
-  </div>
-
-  <div class="book-highlight">
-    Written and illustrated by Rish.
-  </div>
-
-  <div class="availability">
-    Available internationally in paperback and Kindle formats.
   </div>
 
   <div class="buttons">
