@@ -1397,7 +1397,18 @@ body {
 document.querySelectorAll('.lightbox-close').forEach(function(closeButton) {
   closeButton.addEventListener('click', function(event) {
     event.preventDefault();
-    window.location.hash = '';
+
+    document.querySelectorAll('.lightbox').forEach(function(lightbox) {
+      lightbox.style.display = 'none';
+    });
+
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+  });
+});
+
+window.addEventListener('hashchange', function() {
+  document.querySelectorAll('.lightbox').forEach(function(lightbox) {
+    lightbox.style.display = '';
   });
 });
 </script>
