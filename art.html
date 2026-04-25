@@ -1393,7 +1393,14 @@ body {
   <a href="#img51" class="prev">‹</a>
   <a href="#img1" class="next">›</a>
 </div>
-
+<script>
+document.querySelectorAll('.lightbox-close').forEach(function(closeButton) {
+  closeButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  });
+});
+</script>
 
 
 </body>
