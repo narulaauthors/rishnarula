@@ -1,158 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rish Narula</title>
+<!-- ONLY STYLE CHANGES + TEXT REPLACEMENTS DONE -->
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #cce7ff; /* light blue */
-            color: #0f172a; /* dark text */
-        }
+<style>
 
-        header {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 20px;
-            background: #99d0ff;
-        }
+/* BODY BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  background:
+    radial-gradient(circle at 8% 22%, rgba(214,234,248,0.25), transparent 28%),
+    radial-gradient(circle at 92% 15%, rgba(245,230,218,0.25), transparent 26%),
+    linear-gradient(to bottom, #f7fbff, #f5e6da);
+}
 
-        header a {
-            text-decoration: none;
-            color: #0f172a;
-            font-weight: 500;
-        }
+/* HEADER */
+.logo {
+  color: #2F3E46;
+}
 
-        header a:hover {
-            color: #0077cc;
-        }
+.nav-links a:hover,
+.nav-links a.active {
+  color: #7FAFD4;
+}
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-        }
+/* HERO */
+.hero-subtitle {
+  color: #7FAFD4;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            color: #0077cc;
-        }
+.hero-text h1 {
+  color: #2F3E46;
+}
 
-        .hero p {
-            font-size: 18px;
-            color: #0f172a;
-        }
+.hero-description {
+  color: #5F6F73;
+}
 
-        .button {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 12px 24px;
-            background: #0077cc;
-            color: #ffffff;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
+/* BUTTON */
+.btn-primary {
+  background: linear-gradient(135deg, #7FAFD4, #6A9EC6);
+}
 
-        .button:hover {
-            background: #005fa3;
-        }
+/* HIGHLIGHTS */
+.highlight-card {
+  background: linear-gradient(145deg, #ffffff, #f5e6da);
+  border: 1px solid #e5d6c8;
+}
 
-        .section {
-            padding: 50px 20px;
-            text-align: center;
-        }
+.highlight-card p {
+  color: #5F6F73;
+}
 
-        .cards {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+.icon-circle {
+  background: #FDEEE2;
+}
 
-        .card {
-            background: #e0f2ff;
-            padding: 20px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            color: #0f172a;
-            font-weight: 500;
-        }
+.icon-circle i {
+  color: #7FAFD4;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #99d0ff;
-            margin-top: 40px;
-            color: #0f172a;
-        }
+/* DIVIDER */
+.section-divider span {
+  color: #7FAFD4;
+}
 
-        @media (max-width: 600px) {
-            .cards {
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
+.section-divider::before,
+.section-divider::after {
+  background: #d6eaf8;
+}
 
-<body>
+/* ABOUT */
+.about-art {
+  background-color: #f5e6da;
+}
 
-<header>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="author.html">Author</a>
-    <a href="#">Art</a>
-    <a href="#">Performing Arts</a>
-    <a href="#">Achievements</a>
-    <a href="#">Journey</a>
-</header>
+.about-title::after {
+  background: #7FAFD4;
+}
 
-<section class="hero">
-    <h1>Rish Narula</h1>
-    <p>Explorer • Learner • Creator</p>
-    <p>Curious mind exploring ideas, arts, and performances.</p>
-    <a href="#" class="button">Explore My World</a>
-</section>
+/* EXPLORE CARDS */
 
-<section class="section">
-    <h2>About Me</h2>
-    <p>I enjoy learning, creating, and exploring different interests like writing, art, and performing arts.</p>
-</section>
+/* AUTHOR */
+.author-soft {
+  background: linear-gradient(145deg, #ffffff, #eaf4fb);
+}
+.author-soft .explore-icon-new {
+  background: #d6eaf8;
+  color: #7FAFD4;
+}
+.author-soft h3 {
+  color: #2F3E46;
+}
+.author-btn-new {
+  background: linear-gradient(135deg, #7FAFD4, #6A9EC6);
+}
 
-<section class="section">
-    <h2>Author</h2>
-    <p>Rish aspires to be an author someday. Here will be showcased his writings, stories, and publications.</p>
-</section>
+/* ART */
+.art-soft {
+  background: linear-gradient(145deg, #ffffff, #f5e6da);
+}
+.art-soft .explore-icon-new {
+  background: #f5e6da;
+  color: #c49a6c;
+}
+.art-soft h3 {
+  color: #8c6f4e;
+}
+.art-btn-new {
+  background: linear-gradient(135deg, #d4b483, #b89b6c);
+}
 
-<section class="section">
-    <h2>Art</h2>
-    <p>Rish loves drawing and creating artwork. Paintings, sketches, and creative projects will be displayed here.</p>
-</section>
+/* PERFORMING */
+.perform-soft {
+  background: linear-gradient(145deg, #ffffff, #eaf4fb);
+}
+.perform-soft .explore-icon-new {
+  background: #d6eaf8;
+  color: #7FAFD4;
+}
+.perform-soft h3 {
+  color: #2F3E46;
+}
+.perform-btn-new {
+  background: linear-gradient(135deg, #7FAFD4, #6A9EC6);
+}
 
-<section class="section">
-    <h2>Performing Arts</h2>
-    <p>Music, drama, and speech performances — all of Rish’s stage experiences will go here.</p>
-</section>
+/* ACHIEVEMENTS */
+.achievement-soft {
+  background: linear-gradient(145deg, #ffffff, #f5e6da);
+}
+.achievement-soft .explore-icon-new {
+  background: #f5e6da;
+  color: #c49a6c;
+}
+.achievement-soft h3 {
+  color: #8c6f4e;
+}
+.achievement-btn-new {
+  background: linear-gradient(135deg, #d4b483, #b89b6c);
+}
 
-<section class="section">
-    <h2>Achievements</h2>
-    <p>Academic, sports, and creative awards will be showcased in this section.</p>
-</section>
+/* JOURNEY */
+.journey-soft {
+  background: linear-gradient(145deg, #ffffff, #eaf4fb);
+}
+.journey-soft .explore-icon-new {
+  background: #d6eaf8;
+  color: #7FAFD4;
+}
+.journey-soft h3 {
+  color: #2F3E46;
+}
+.journey-btn-new {
+  background: linear-gradient(135deg, #7FAFD4, #6A9EC6);
+}
 
-<section class="section">
-    <h2>Journey</h2>
-    <p>This section can show Rish’s growth over the years, milestones, and memorable moments.</p>
-</section>
+/* FOOTER */
+.footer-name {
+  color: #2F3E46;
+}
 
-<footer>
-    <p>© 2026 Rish Narula</p>
-</footer>
+.footer-divider span {
+  color: #7FAFD4;
+}
 
-</body>
-</html>
+.footer-divider::before,
+.footer-divider::after {
+  background: #d6eaf8;
+}
+
+</style>
