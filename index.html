@@ -19,11 +19,11 @@ body {
   font-family: 'Nunito', sans-serif;
   color: #333;
   background:
-    radial-gradient(circle at 8% 22%, rgba(214,234,248,0.30), transparent 28%),
-    radial-gradient(circle at 92% 15%, rgba(245,230,218,0.35), transparent 26%),
-    linear-gradient(to bottom, #f7fbff, #f5e6da);
+    radial-gradient(circle at 10% 20%, rgba(214,234,248,0.25), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(255,240,225,0.25), transparent 30%),
+    linear-gradient(to bottom, #f8fcff 0%, #fdf9f5 60%, #ffffff 100%);
 }
-
+  
 /* HEADER */
 .header {
   background: rgba(255,255,255,0.9);
@@ -159,14 +159,14 @@ section:nth-of-type(2) {
 }
 
 .highlight-card {
-  background: linear-gradient(145deg, #ffffff, #f5e6da);
+  background: #ffffff;                     /* clean white instead of muddy gradient */
   border-radius: 20px;
   padding: 26px 18px;
   text-align: center;
   flex: 1;
   margin: 10px;
-  border: 1px solid #e5d6c8;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  border: 1px solid #eef2f6;               /* softer border */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* slightly lifted look */
   transition: all 0.3s ease;
 }
 
@@ -348,17 +348,17 @@ section:nth-of-type(2) {
   width: auto;
 }
 
-/* CARD COLORS */
 .author-soft,
 .perform-soft,
 .journey-soft {
-  background: linear-gradient(145deg, #ffffff, #eaf4fb);
+  background: #f3f9ff;              /* clean soft blue */
+  border-color: #e3eef7;
 }
 
 .author-soft .explore-icon-new,
 .perform-soft .explore-icon-new,
 .journey-soft .explore-icon-new {
-  background: #d6eaf8;
+  background: #e6f2fb;              /* lighter icon bg */
   color: #7FAFD4;
 }
 
@@ -374,15 +374,18 @@ section:nth-of-type(2) {
   background: linear-gradient(135deg, #7FAFD4, #6A9EC6);
 }
 
+
+/* SAND CARDS — already good but refined */
+
 .art-soft,
 .achievement-soft {
-  background: linear-gradient(145deg, #ffffff, #f5e6da);
-  border-color: #e5d6c8;
+  background: #fffaf4;
+  border-color: #f0e6dc;
 }
 
 .art-soft .explore-icon-new,
 .achievement-soft .explore-icon-new {
-  background: #FDEEE2;
+  background: #fdf3e8;              /* slightly lighter than before */
   color: #c49a6c;
 }
 
