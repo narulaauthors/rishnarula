@@ -18,13 +18,10 @@ body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
   color: #333;
-  linear-gradient(
-  to right,
-  #fdfaf6 0%,     /* clean light cream */
-  #f8f4ef 55%,    /* soft transition */
-  #f3f7fb 85%,    /* very light blue hint starts */
-  #eef4f9 100%    /* subtle blue end */
-    )
+  background:
+  radial-gradient(circle at 75% 25%, rgba(170, 200, 225, 0.18), transparent 45%),
+  radial-gradient(circle at 85% 70%, rgba(150, 185, 210, 0.12), transparent 50%),
+  linear-gradient(to right, #fdfaf6 0%, #f7f1ea 55%, #f2f6fa 100%);
 }
   
 /* HEADER */
