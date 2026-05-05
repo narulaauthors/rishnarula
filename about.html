@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rish Narula</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=DM+Serif+Display&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  background:
+    radial-gradient(circle at 8% 22%, rgba(214,234,248,0.30), transparent 28%),
+    radial-gradient(circle at 92% 15%, rgba(245,230,218,0.35), transparent 26%),
+    linear-gradient(to bottom, #f7fbff, #f5e6da);
+}
+
+/* HEADER */
+.header {
+  background: rgba(255,255,255,0.9);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav {
+  max-width: 1180px;
+  margin: auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: #2F3E46;
+}
+
+.nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #7FAFD4;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 24px;
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  transform: translateY(-10px);
+}
+
+.hero-subtitle {
+  color: #7FAFD4;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 44px;
+  line-height: 1.1;
+  margin: 0 0 18px;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  color: #2F3E46;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #5F6F73;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #7FAFD4, #6A9EC6);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.disabled-btn {
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* HERO IMAGE */
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 18px;
+}
+
+/* COMMON SECTION */
+section {
+  padding: 50px 20px;
+}
+
+section:nth-of-type(2) {
+  padding-top: 10px;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #2F3E46;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+/* HIGHLIGHTS */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.highlight-card {
+  background: linear-gradient(145deg, #ffffff, #f5e6da);
+  border-radius: 20px;
+  padding: 26px 18px;
+  text-align: center;
+  flex: 1;
+  margin: 10px;
+  border: 1px solid #e5d6c8;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.highlight-card h3 {
+  margin: 10px 0 8px;
+  font-size: 18px;
+  color: #2F3E46;
+}
+
+.highlight-card p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #5F6F73;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 40px;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d6eaf8;
+  margin: 0 10px;
+}
+
+.section-divider span {
+  color: #7FAFD4;
+  font-size: 14px;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #FDEEE2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.icon-circle i {
+  font-size: 26px;
+  color: #7FAFD4;
+}
+
+/* ABOUT */
+.about-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-art {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f5e6da;
+}
+
+.about-art img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+.about-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #7FAFD4;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: #5F6F73;
+}
+
+.about-content .btn-primary {
+  display: inline-block;
+  width: fit-content;
+  align-self: center;
+  padding: 12px 26px;
+  margin-top: 20px;
+}
+
+/* EXPLORE MY WORK */
+.explore-new {
+  padding: 50px 20px;
+}
+
+.explore-row {
+  max-width: 1100px;
+  margin: 34px auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.explore-row.bottom-row {
+  margin-top: 26px;
+}
+
+.explore-card-new {
+  width: 300px;
+  min-height: 245px;
+  border-radius: 20px;
+  padding: 26px 22px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e5d6c8;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.explore-card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+}
+
+.explore-card-new h3 {
+  font-size: 20px;
+  margin: 10px 0 10px;
+}
+
+.explore-card-new p {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #5F6F73;
+  margin: 0 0 20px;
+}
+
+.explore-icon-new {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.explore-btn-new {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 22px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  width: auto;
+}
+
+/* CARD COLORS */
+.author-soft,
+.perform-soft,
+.journey-soft {
+  background: linear-gradient(145deg, #ffffff, #eaf4fb);
+}
+
+.author-soft .explore-icon-new,
+.perform-soft .explore-icon-new,
+.journey-soft .explore-icon-new {
+  background: #d6eaf8;
+  color: #7FAFD4;
+}
+
+.author-soft h3,
+.perform-soft h3,
+.journey-soft h3 {
+  color: #2F3E46;
+}
+
+.author-btn-new,
+.perform-btn-new,
+.journey-btn-new {
+  background: linear-gradient(135deg, #7FAFD4, #6A9EC6);
+}
+
+.art-soft,
+.achievement-soft {
+  background: linear-gradient(145deg, #ffffff, #f5e6da);
+  border-color: #e5d6c8;
+}
+
+.art-soft .explore-icon-new,
+.achievement-soft .explore-icon-new {
+  background: #FDEEE2;
+  color: #c49a6c;
+}
+
+.art-soft h3,
+.achievement-soft h3 {
+  color: #8c6f4e;
+}
+
+.art-btn-new,
+.achievement-btn-new {
+  background: linear-gradient(135deg, #d4b483, #b89b6c);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+.footer-new {
+  text-align: center;
+  padding: 40px 20px 30px;
+  background: transparent;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.footer-divider::before,
+.footer-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d6eaf8;
+  margin: 0 10px;
+}
+
+.footer-divider span {
+  color: #7FAFD4;
+  font-size: 14px;
+}
+
+.footer-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  color: #2F3E46;
+  margin: 6px 0;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #5F6F73;
+  margin: 6px 0 10px;
+  letter-spacing: 0.3px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #888;
+  margin-top: 8px;
+}
+
+.nav-links a.active {
+  color: #7FAFD4;
+}
+
+/* MOBILE */
+@media (max-width: 850px) {
+  .hero-container,
+  .about-wrap,
+  .highlight-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    text-align: center;
+  }
+
+  .about-content .btn-primary {
+    align-self: center;
+  }
+
+  .explore-card-new {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="nav">
+    <div class="logo">Rish Narula</div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html">Journey</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <p class="hero-subtitle">AUTHOR • ARTIST • PERFORMER</p>
+      <h1>Rish Narula</h1>
+      <p class="hero-description">
+        Rish’s world is filled with curiosity, ideas, and a love for exploring new possibilities.
+      </p>
+      <a href="#" class="btn-primary disabled-btn">Explore His World</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/rish_hero.png" alt="Rish">
+    </div>
+
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="section">
+  <div class="section-inner">
+    <h2 class="section-title">Highlights</h2>
+
+    <div class="section-divider">
+      <span>★</span>
+    </div>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div class="icon-circle">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <h3>Young Author</h3>
+        <p>Exploring stories and imagination</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="icon-circle">
+          <i class="fas fa-palette"></i>
+        </div>
+        <h3>Visual Artist</h3>
+        <p>Bringing ideas to life through creativity</p>
+      </div>
+
+      <div class="highlight-card">
+        <div class="icon-circle">
+          <i class="fas fa-masks-theater"></i>
+        </div>
+        <h3>Performer</h3>
+        <p>Expressing through music and performance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="section-inner about-wrap">
+
+    <div class="about-art">
+      <img src="images/rish-creative.png" alt="Rish creative illustration">
+    </div>
+
+    <div class="about-content">
+      <h2 class="section-title about-title">About Rish</h2>
+
+      <p class="about-text">
+        A curious mind and an explorer at heart, Rish enjoys discovering new ideas and expressing himself through stories, art, and creativity. His journey is all about learning, imagining, and growing every day.
+      </p>
+
+      <a href="about.html" class="btn-primary">Know More About Him</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPLORE MY WORK -->
+<section class="explore-new">
+  <h2 class="section-title">Explore My Work</h2>
+  <div class="section-divider">
+    <span>★</span>
+  </div>
+
+  <div class="explore-row">
+    <div class="explore-card-new author-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-book"></i>
+      </div>
+      <h3>Author</h3>
+      <p>A bookshelf of dreams, characters, and adventures created by Rish</p>
+      <a href="author.html" class="explore-btn-new author-btn-new">Explore Books</a>
+    </div>
+
+    <div class="explore-card-new art-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-pencil-alt"></i>
+      </div>
+      <h3>Art</h3>
+      <p>From simple sketches to detailed scenes, each artwork tells its own story</p>
+      <a href="art.html" class="explore-btn-new art-btn-new">Explore Art</a>
+    </div>
+
+    <div class="explore-card-new perform-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-music"></i>
+      </div>
+      <h3>Performing Arts</h3>
+      <p>Music and theatre speak to his heart, where emotions find their expression</p>
+      <a href="performing.html" class="explore-btn-new perform-btn-new">Explore Performances</a>
+    </div>
+  </div>
+
+  <div class="explore-row bottom-row">
+    <div class="explore-card-new achievement-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-trophy"></i>
+      </div>
+      <h3>Achievements</h3>
+      <p>Moments of recognition celebrating his efforts and creativity</p>
+      <a href="achievements.html" class="explore-btn-new achievement-btn-new">Explore Achievements</a>
+    </div>
+
+    <div class="explore-card-new journey-soft">
+      <div class="explore-icon-new">
+        <i class="fas fa-mountain-sun"></i>
+      </div>
+      <h3>Journey</h3>
+      <p>Capturing his moments of learning, exploring, and creating everlasting memories</p>
+      <a href="journey.html" class="explore-btn-new journey-btn-new">Explore Journey</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-new">
+  <div class="footer-inner">
+
+    <div class="footer-divider">
+      <span>✦</span>
+    </div>
+
+    <h3 class="footer-name">Rish Narula</h3>
+
+    <p class="footer-tagline">
+      Creating joyful moments with heart
+    </p>
+
+    <p class="footer-copy">
+      © <span id="year"></span> Rish Narula
+    </p>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
