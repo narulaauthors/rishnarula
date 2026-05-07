@@ -25,6 +25,46 @@ body {
   padding: 40px 20px 14px;
 }
 
+  /* HEADER */
+.header {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.nav {
+  max-width: 1180px;
+  margin: auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: #6A9EC6;
+}
+
+.nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #7FAFD4;
+}
+
+.nav-links a.active {
+  color: #7FAFD4;
+}
 .header h1 {
   color: #2c74c9;
   font-family: 'Poppins', sans-serif;
@@ -299,11 +339,73 @@ body {
   .lightbox .next {
     right: 14px;
   }
+  /* FOOTER */
+.footer-new {
+  text-align: center;
+  padding: 40px 20px 30px;
+  background: transparent;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.footer-divider::before,
+.footer-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d6eaf8;
+  margin: 0 10px;
+}
+
+.footer-divider span {
+  color: #7FAFD4;
+  font-size: 14px;
+}
+
+.footer-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  color: #567A9E;
+  margin: 6px 0;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #5F6F73;
+  margin: 6px 0 10px;
+  letter-spacing: 0.3px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #888;
+  margin-top: 8px;
+}
 }
 </style>
 </head>
 
 <body>
+  <header class="header">
+  <div class="nav">
+    <div class="logo">Rish Narula</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html" class="active">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html">Journey</a>
+    </nav>
+  </div>
+</header>
 
 <!-- HEADER -->
 <div class="header">
@@ -1420,7 +1522,27 @@ window.addEventListener('hashchange', function() {
   });
 });
 </script>
+<footer class="footer-new">
 
+  <div class="footer-divider">
+    <span>✦</span>
+  </div>
+
+  <h3 class="footer-name">Rish Narula</h3>
+
+  <p class="footer-tagline">
+    Exploring creativity with joy
+  </p>
+
+  <p class="footer-copy">
+    © <span id="year"></span> Rish Narula
+  </p>
+
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
