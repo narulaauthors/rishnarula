@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Performing Arts</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:'Nunito', sans-serif;
+  color:#355070;
+
+  background:
+    radial-gradient(circle at 88% 28%, rgba(180,195,220,0.10), transparent 38%),
+    linear-gradient(to right, #fffaf6 0%, #fffaf6 72%, #f7f9fd 100%);
+}
+
+/* HEADER */
+
+.header{
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom:1px solid rgba(0,0,0,0.05);
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+}
+
+.nav{
+  max-width:1180px;
+  margin:auto;
+  padding:18px 24px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-family:'Dancing Script', cursive;
+  font-size:30px;
+  color:#D27C8A;
+}
+
+.nav-links a{
+  margin-left:28px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  font-size:16px;
+}
+
+.nav-links a:hover{
+  color:#D27C8A;
+}
+
+.nav-links a.active{
+  color:#D27C8A;
+}
+
+/* MAIN */
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 24px 60px;
+}
+
+.about-card{
+  background: transparent;
+  border:none;
+  border-radius:0;
+
+  padding:40px 20px 20px;
+
+  box-shadow:none;
+
+  text-align:center;
+}
+
+.about-card h1{
+  font-size:54px;
+  margin-bottom:34px;
+  color:#D27C8A;
+
+  font-weight:700;
+}
+
+.about-card p{
+  font-size:19px;
+  line-height:2;
+
+  color:#7A6262;
+
+  margin-bottom:28px;
+}
+
+/* FOOTER */
+
+.footer-new{
+  text-align:center;
+  padding:42px 20px 34px;
+  background:transparent;
+}
+
+.footer-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:14px;
+}
+
+.footer-divider::before,
+.footer-divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:#ead8d8;
+  margin:0 10px;
+}
+
+.footer-divider span{
+  color:#D8A2AC;
+  font-size:14px;
+}
+
+.footer-name{
+  font-family:'Dancing Script', cursive;
+  font-size:26px;
+  color:#C87886;
+  margin:6px 0;
+}
+
+.footer-tagline{
+  font-size:14px;
+  color:#6E6A6A;
+  margin:6px 0 10px;
+  letter-spacing:0.3px;
+}
+
+.footer-copy{
+  font-size:13px;
+  color:#888;
+  margin-top:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.about-card{
+  padding:50px 28px;
+}
+
+.about-card h1{
+  font-size:40px;
+}
+
+.about-card p{
+  font-size:17px;
+  line-height:1.9;
+}
+
+.nav{
+  flex-direction:column;
+  gap:16px;
+}
+
+.nav-links{
+  text-align:center;
+}
+
+.nav-links a{
+  margin:0 10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="nav">
+
+    <div class="logo">Araina Narula</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html">Art</a>
+      <a href="performing.html" class="active">Performing Arts</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html">Journey</a>
+    </nav>
+
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="about-card">
+
+    <h1>Performing Arts</h1>
+
+    <p>
+      Araina loves expressing herself through music, movement, and creative performances. She enjoys bringing stories and emotions to life with confidence and joy.
+    </p>
+
+    <p>
+      Whether it is singing, acting, stage performances, or participating in school presentations, she enjoys connecting with people through creativity and expression.
+    </p>
+
+    <p>
+      With growing confidence and enthusiasm, Araina continues exploring the world of performing arts with imagination, curiosity, and a love for learning new experiences.
+    </p>
+
+  </div>
+
+</div>
+
+<footer class="footer-new">
+
+  <div class="footer-divider">
+    <span>✦</span>
+  </div>
+
+  <h3 class="footer-name">Araina Narula</h3>
+
+  <p class="footer-tagline">
+    Creating joyful moments with heart
+  </p>
+
+  <p class="footer-copy">
+    © 2026 Araina Narula
+  </p>
+
+</footer>
+
+</body>
+</html>
