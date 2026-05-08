@@ -189,6 +189,53 @@ background: linear-gradient(180deg, #fffbf8 0%, #fdf7f1 100%);
 @media (max-width:700px){
   .book-top { flex-direction: column; }
 }
+  /* FOOTER */
+.footer-new {
+  text-align: center;
+  padding: 42px 20px 34px;
+  background: transparent;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.footer-divider::before,
+.footer-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d6eaf8;
+  margin: 0 10px;
+}
+
+.footer-divider span {
+  color: #7FAFD4;
+  font-size: 14px;
+}
+
+.footer-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  color: #567A9E;
+  margin: 6px 0;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #5F6F73;
+  margin: 6px 0 10px;
+  letter-spacing: 0.3px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #888;
+  margin-top: 8px;
+}
 </style>
 </head>
 
@@ -448,7 +495,29 @@ function closeLightbox(){
   document.getElementById('lightbox').style.display='none';
 }
 </script>
+<footer class="footer-new">
+  <div class="footer-inner">
 
+    <div class="footer-divider">
+      <span>✦</span>
+    </div>
+
+    <h3 class="footer-name">Rish Narula</h3>
+
+    <p class="footer-tagline">
+      Exploring creativity with joy
+    </p>
+
+    <p class="footer-copy">
+      © <span id="year"></span> Rish Narula
+    </p>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
 
