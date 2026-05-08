@@ -12,7 +12,12 @@
 body {
   margin: 0;
   font-family: 'Nunito', sans-serif;
-  background: linear-gradient(to bottom, #eaf4ff, #dff0ff);
+
+  background:
+    radial-gradient(circle at top right, rgba(173, 201, 230, 0.11), transparent 30%),
+    radial-gradient(circle at top left, rgba(255, 235, 214, 0.14), transparent 24%),
+    linear-gradient(to bottom, #fffefb 0%, #f9fbfe 100%);
+
   color: #1e293b;
 }
 
@@ -30,10 +35,16 @@ h1 {
 }
 
 .section-card {
-  background: #d6eaff;
-  border-radius: 20px;
-  margin: 40px 0;
-  padding: 20px;
+  background: linear-gradient(180deg, #fffdfa 0%, #fef8f2 100%);
+  border: 1px solid rgba(230, 220, 210, 0.65);
+
+  border-radius: 22px;
+  margin: 42px 0;
+  padding: 24px;
+
+  box-shadow:
+    0 10px 30px rgba(120, 140, 160, 0.05),
+    0 2px 10px rgba(255,255,255,0.55) inset;
 }
 
 .section-strip {
