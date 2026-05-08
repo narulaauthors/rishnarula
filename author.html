@@ -6,8 +6,7 @@
 <title>Rish Narula – Author Journey</title>
   
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 <style>
 body {
   margin: 0;
@@ -21,6 +20,46 @@ body {
   color: #1e293b;
 }
 
+  .header {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+  .nav {
+  max-width: 1180px;
+  margin: auto;
+  padding: 18px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: #6A9EC6;
+}
+
+.nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #7FAFD4;
+}
+
+.nav-links a.active {
+  color: #7FAFD4;
+}
 .container {
   max-width: 1000px;
   margin: auto;
@@ -156,7 +195,23 @@ border: 1px solid rgba(220, 198, 176, 0.95);
 </head>
 
 <body>
+<header class="header">
+  <div class="nav">
 
+    <div class="logo">Rish Narula</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html" class="active">Author</a>
+      <a href="art.html">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html">Journey</a>
+    </nav>
+
+  </div>
+</header>
 <div class="container">
 
 <h1>Rish Narula – Author Journey</h1>
