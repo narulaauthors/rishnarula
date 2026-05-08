@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Achievements</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:'Nunito', sans-serif;
+  color:#355070;
+
+  background:
+    radial-gradient(circle at 88% 28%, rgba(170,190,220,0.10), transparent 38%),
+    linear-gradient(to right, #fffbf8 0%, #fffbf8 72%, #f5f8fd 100%);
+}
+
+/* HEADER */
+
+.header{
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom:1px solid rgba(0,0,0,0.05);
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+}
+
+.nav{
+  max-width:1180px;
+  margin:auto;
+  padding:18px 24px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-family:'Dancing Script', cursive;
+  font-size:30px;
+  color:#6A9EC6;
+}
+
+.nav-links a{
+  margin-left:28px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  font-size:16px;
+}
+
+.nav-links a:hover{
+  color:#7FAFD4;
+}
+
+.nav-links a.active{
+  color:#7FAFD4;
+}
+
+/* MAIN */
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 24px 60px;
+}
+
+.about-card{
+  background: transparent;
+  border:none;
+  border-radius:0;
+
+  padding:40px 20px 20px;
+
+  box-shadow:none;
+
+  text-align:center;
+}
+
+.about-card h1{
+  font-size:52px;
+  margin-bottom:34px;
+  color:#2E73D2;
+
+  font-weight:700;
+}
+
+.about-card p{
+  font-size:19px;
+  line-height:2;
+
+  color:#2F55A4;
+
+  margin-bottom:28px;
+}
+
+/* FOOTER */
+
+.footer-new{
+  text-align:center;
+  padding:42px 20px 34px;
+  background:transparent;
+}
+
+.footer-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:14px;
+}
+
+.footer-divider::before,
+.footer-divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:#d6eaf8;
+  margin:0 10px;
+}
+
+.footer-divider span{
+  color:#7FAFD4;
+  font-size:14px;
+}
+
+.footer-name{
+  font-family:'Dancing Script', cursive;
+  font-size:26px;
+  color:#567A9E;
+  margin:6px 0;
+}
+
+.footer-tagline{
+  font-size:14px;
+  color:#5F6F73;
+  margin:6px 0 10px;
+  letter-spacing:0.3px;
+}
+
+.footer-copy{
+  font-size:13px;
+  color:#888;
+  margin-top:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.about-card{
+  padding:50px 28px;
+}
+
+.about-card h1{
+  font-size:40px;
+}
+
+.about-card p{
+  font-size:17px;
+  line-height:1.9;
+}
+
+.nav{
+  flex-direction:column;
+  gap:16px;
+}
+
+.nav-links{
+  text-align:center;
+}
+
+.nav-links a{
+  margin:0 10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="nav">
+
+    <div class="logo">Rish Narula</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html">Author</a>
+      <a href="art.html">Art</a>
+      <a href="performing.html">Performing Arts</a>
+      <a href="achievements.html" class="active">Achievements</a>
+      <a href="journey.html">Journey</a>
+    </nav>
+
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="about-card">
+
+    <h1>Achievements</h1>
+
+    <p>
+      Rish enjoys exploring different creative opportunities and learning experiences that help him grow with confidence and curiosity. He loves participating in activities that encourage imagination, expression, and teamwork.
+    </p>
+
+    <p>
+      Through school events, creative projects, performances, reading challenges, and artistic activities, he continues building new skills while discovering the joy of learning something new every day.
+    </p>
+
+    <p>
+      Each experience motivates Rish to keep exploring, creating, and challenging himself with enthusiasm, positivity, and a growing passion for creativity.
+    </p>
+
+  </div>
+
+</div>
+
+<footer class="footer-new">
+
+  <div class="footer-divider">
+    <span>✦</span>
+  </div>
+
+  <h3 class="footer-name">Rish Narula</h3>
+
+  <p class="footer-tagline">
+    Exploring creativity with joy
+  </p>
+
+  <p class="footer-copy">
+    © 2026 Rish Narula
+  </p>
+
+</footer>
+
+</body>
+</html>
