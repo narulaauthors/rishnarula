@@ -86,7 +86,21 @@ body {
   text-align: center;
   font-size: 16px;
 }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 100%;
+  
+  background: url("cream-splash.png") no-repeat left top;
+  background-size: contain;
 
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: -1;
+}
 /* ===== SECTION ===== */
 .section {
   margin: 40px auto;
