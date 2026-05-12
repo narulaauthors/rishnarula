@@ -101,6 +101,22 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
+  body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 420px;
+  height: 700px;
+
+  background: url("blue-splash.png") no-repeat right top;
+  background-size: contain;
+
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: -1;
+}
+  
 /* ===== SECTION ===== */
 .section {
   margin: 40px auto;
