@@ -374,17 +374,17 @@ body::before {
   .lightbox .next {
     right: 14px;
   }
-  /* FOOTER */
-footer {
+  
+}
+  .footer-new {
   text-align: center;
-  padding: 42px 20px 36px;
-  color: #777;
+  padding: 42px 20px 34px;
+  background: transparent;
 }
 
-.footer-new {
-  text-align: center;
-  padding: 40px 20px 30px;
-  background: transparent;
+.footer-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .footer-divider {
@@ -397,9 +397,10 @@ footer {
 .footer-divider::before,
 .footer-divider::after {
   content: "";
-  width: 46%;
+  flex: 1;
   height: 1px;
   background: rgba(127, 175, 212, 0.28);
+  margin: 0 12px;
 }
 
 .footer-divider span {
@@ -409,28 +410,24 @@ footer {
 
 .footer-name {
   font-family: 'Dancing Script', cursive;
-  font-size: 34px;
+  font-size: 26px;
   font-weight: 600;
-  color: #5E7FA7;
-  margin-bottom: 6px;
+  color: #567A9E;
+  margin: 6px 0;
   line-height: 1.1;
 }
 
 .footer-tagline {
-  font-size: 16px;
-  color: #6F7F86;
-  margin-bottom: 10px;
-  font-weight: 500;
+  font-size: 14px;
+  color: #5F6F73;
+  margin: 6px 0 10px;
+  letter-spacing: 0.3px;
 }
 
 .footer-copy {
-  font-size: 14px;
-  color: #8C8C8C;
-}
-  .footer-star {
-  color: #8FB6D8;
-  font-size: 14px;
-}
+  font-size: 13px;
+  color: #888;
+  margin-top: 8px;
 }
 </style>
 </head>
