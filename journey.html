@@ -67,6 +67,38 @@ body{
 .nav-links a.active{
   color:#7FAFD4;
 }
+  body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 700px;
+
+  background: url("cream-splash3.png") no-repeat left top;
+  background-size: contain;
+
+  opacity: 0.40;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: -40px;
+
+  width: 420px;
+  height: 820px;
+
+  background: url("blue-splash5.png") no-repeat right top;
+  background-size: contain;
+
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: -1;
+}
 
 /* MAIN */
 
