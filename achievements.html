@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Achievements</title>
+<title>Rish Narula – Achievements</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
   box-sizing:border-box;
 }
@@ -20,19 +19,18 @@ body{
   color:#355070;
 
   background:
-    radial-gradient(circle at 88% 28%, rgba(170,190,220,0.10), transparent 38%),
-    linear-gradient(to right, #fffbf8 0%, #fffbf8 72%, #f5f8fd 100%);
+    radial-gradient(circle at top right, rgba(173, 201, 230, 0.11), transparent 30%),
+    radial-gradient(circle at top left, rgba(255, 235, 214, 0.14), transparent 24%),
+    linear-gradient(to bottom, #fffefb 0%, #f9fbfe 100%);
 }
 
 /* HEADER */
 
 .header{
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(0,0,0,0.05);
-
   box-shadow:0 4px 12px rgba(0,0,0,0.04);
 }
 
@@ -40,7 +38,6 @@ body{
   max-width:1180px;
   margin:auto;
   padding:18px 24px;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -60,81 +57,129 @@ body{
   font-size:16px;
 }
 
-.nav-links a:hover{
-  color:#7FAFD4;
-}
-
+.nav-links a:hover,
 .nav-links a.active{
   color:#7FAFD4;
 }
-  body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 420px;
-  height: 700px;
 
-  background: url("cream-splash3.png") no-repeat left top;
-  background-size: contain;
+/* SPLASHES */
 
-  opacity: 0.40;
-  pointer-events: none;
-  z-index: -1;
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:420px;
+  height:700px;
+  background:url("cream-splash3.png") no-repeat left top;
+  background-size:contain;
+  opacity:0.55;
+  pointer-events:none;
+  z-index:-1;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: -40px;
-
-  width: 420px;
-  height: 820px;
-
-  background: url("blue-splash5.png") no-repeat right top;
-  background-size: contain;
-
-  opacity: 0.32;
-  pointer-events: none;
-  z-index: -1;
+body::after{
+  content:"";
+  position:fixed;
+  top:0;
+  right:-40px;
+  width:420px;
+  height:820px;
+  background:url("blue-splash5.png") no-repeat right top;
+  background-size:contain;
+  opacity:0.40;
+  pointer-events:none;
+  z-index:-1;
 }
 
 /* MAIN */
 
 .container{
-  max-width:1100px;
+  max-width:1050px;
   margin:auto;
-  padding:80px 24px 60px;
+  padding:70px 24px 50px;
 }
 
-.about-card{
-  background: transparent;
-  border:none;
-  border-radius:0;
-
-  padding:40px 20px 20px;
-
-  box-shadow:none;
-
+.page-intro{
   text-align:center;
+  max-width:820px;
+  margin:0 auto 44px;
 }
 
-.about-card h1{
-  font-size:52px;
-  margin-bottom:34px;
+.page-intro h1{
+  font-family:'Poppins', sans-serif;
+  font-size:42px;
   color:#2E73D2;
-
-  font-weight:700;
+  margin:0 0 18px;
 }
 
-.about-card p{
-  font-size:19px;
-  line-height:2;
-
+.page-intro p{
+  font-size:17px;
+  line-height:1.8;
   color:#2F55A4;
+  margin:0;
+}
 
-  margin-bottom:28px;
+/* ACHIEVEMENT CARDS */
+
+.achievement-card{
+  max-width:980px;
+  margin:28px auto;
+  padding:30px 34px;
+  display:flex;
+  gap:26px;
+  align-items:flex-start;
+  text-align:left;
+
+  background:linear-gradient(180deg, #fffdfa 0%, #fdf7f1 100%);
+  border:1px solid rgba(230,220,210,0.72);
+  border-radius:22px;
+
+  box-shadow:0 10px 28px rgba(120,140,160,0.08);
+}
+
+.achievement-icon{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#eaf4ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  flex-shrink:0;
+}
+
+.achievement-content h2{
+  font-family:'Poppins', sans-serif;
+  color:#0077cc;
+  margin:0 0 10px;
+  font-size:24px;
+}
+
+.achievement-content p{
+  color:#1e3a8a;
+  font-size:16px;
+  line-height:1.75;
+  margin:0 0 14px;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:20px;
+  background:#e8f3ff;
+  color:#1d64b7;
+  font-weight:700;
+  font-size:14px;
+  margin:4px 8px 8px 0;
+}
+
+.note{
+  font-size:13.5px;
+  color:#6b7c8f;
+  font-style:italic;
+  margin-top:4px;
 }
 
 /* FOOTER */
@@ -189,35 +234,34 @@ body::after {
 /* MOBILE */
 
 @media(max-width:768px){
+  .nav{
+    flex-direction:column;
+    gap:16px;
+  }
 
-.about-card{
-  padding:50px 28px;
+  .nav-links{
+    text-align:center;
+  }
+
+  .nav-links a{
+    margin:0 10px;
+  }
+
+  .container{
+    padding:55px 18px 40px;
+  }
+
+  .page-intro h1{
+    font-size:34px;
+  }
+
+  .achievement-card{
+    flex-direction:column;
+    padding:26px 22px;
+    text-align:center;
+    align-items:center;
+  }
 }
-
-.about-card h1{
-  font-size:40px;
-}
-
-.about-card p{
-  font-size:17px;
-  line-height:1.9;
-}
-
-.nav{
-  flex-direction:column;
-  gap:16px;
-}
-
-.nav-links{
-  text-align:center;
-}
-
-.nav-links a{
-  margin:0 10px;
-}
-
-}
-
 </style>
 </head>
 
@@ -225,7 +269,6 @@ body::after {
 
 <header class="header">
   <div class="nav">
-
     <div class="logo">Rish Narula</div>
 
     <nav class="nav-links">
@@ -237,34 +280,74 @@ body::after {
       <a href="achievements.html" class="active">Achievements</a>
       <a href="journey.html">Journey</a>
     </nav>
-
   </div>
 </header>
 
 <div class="container">
 
-  <div class="about-card">
-
-    <h1>Achievements</h1>
-
+  <div class="page-intro">
+    <h1>Achievements & Milestones</h1>
     <p>
-      Rish enjoys exploring different creative opportunities and learning experiences that help him grow with confidence and curiosity. He loves participating in activities that encourage imagination, expression, and teamwork.
+      A collection of learning milestones, creative accomplishments, and meaningful experiences
+      that reflect Rish’s interests, efforts, and growth across different areas.
     </p>
+  </div>
 
-    <p>
-      Through school events, creative projects, performances, reading challenges, and artistic activities, he continues building new skills while discovering the joy of learning something new every day.
-    </p>
+  <div class="achievement-card">
+    <div class="achievement-icon">🎵</div>
+    <div class="achievement-content">
+      <h2>Music</h2>
+      <p>
+        Rish is passionate about singing and enjoys expressing himself through music with enthusiasm and emotion.
+        His musical journey reflects his love for rhythm, melody, and joyful performance.
+      </p>
+      <div class="badge">Trinity Vocals – Grade 1</div>
+      <div class="note">Highest completed level shown. Full certificates are kept private.</div>
+    </div>
+  </div>
 
-    <p>
-      Each experience motivates Rish to keep exploring, creating, and challenging himself with enthusiasm, positivity, and a growing passion for creativity.
-    </p>
+  <div class="achievement-card">
+    <div class="achievement-icon">🎭</div>
+    <div class="achievement-content">
+      <h2>Speech & Drama</h2>
+      <p>
+        Through speech, drama, mime, and theatre activities, Rish continues to build confidence,
+        expression, imagination, and stage presence.
+      </p>
+      <div class="badge">Speech & Drama Milestones</div>
+      <div class="note">Performance videos and expressive moments can be shared on the Performing Arts page.</div>
+    </div>
+  </div>
 
+  <div class="achievement-card">
+    <div class="achievement-icon">🎨</div>
+    <div class="achievement-content">
+      <h2>Art & Creativity</h2>
+      <p>
+        Rish enjoys drawing, painting, and experimenting with creative ideas. His artwork reflects imagination,
+        attention to detail, and a natural love for visual storytelling.
+      </p>
+      <div class="badge">Creative Showcase</div>
+      <div class="note">Detailed artwork is displayed separately on the Art page.</div>
+    </div>
+  </div>
+
+  <div class="achievement-card">
+    <div class="achievement-icon">🏅</div>
+    <div class="achievement-content">
+      <h2>Sports & Activities</h2>
+      <p>
+        Rish enjoys participating in games and activities that encourage teamwork, energy,
+        discipline, and joyful participation.
+      </p>
+      <div class="badge">Participation & Team Spirit</div>
+      <div class="note">More sports and activity milestones can be added as his journey grows.</div>
+    </div>
   </div>
 
 </div>
 
 <footer class="footer-new">
-
   <div class="footer-divider">
     <span>✦</span>
   </div>
@@ -278,7 +361,6 @@ body::after {
   <p class="footer-copy">
     © 2026 Rish Narula
   </p>
-
 </footer>
 
 </body>
