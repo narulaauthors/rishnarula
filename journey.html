@@ -4,55 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Journey</title>
+<title>Rish Narula – Journey</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-  box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 body{
   margin:0;
   font-family:'Nunito', sans-serif;
   color:#355070;
-
   background:
-    radial-gradient(circle at 88% 28%, rgba(170,190,220,0.10), transparent 38%),
-    linear-gradient(to right, #fffbf8 0%, #fffbf8 72%, #f5f8fd 100%);
+    radial-gradient(circle at top right, rgba(173,201,230,0.14), transparent 30%),
+    radial-gradient(circle at top left, rgba(255,228,196,0.16), transparent 24%),
+    linear-gradient(to bottom,#fffdfb,#f5f9fd);
 }
 
 /* HEADER */
-
-.header{
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
+.top-header{
+  background:rgba(255,255,255,0.95);
   border-bottom:1px solid rgba(0,0,0,0.05);
-
-  box-shadow:0 4px 12px rgba(0,0,0,0.04);
 }
 
-.nav{
+.top-nav{
   max-width:1180px;
   margin:auto;
-  padding:18px 24px;
-
+  padding:16px 24px;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
-.logo{
+.top-logo{
   font-family:'Dancing Script', cursive;
-  font-size:30px;
-  color:#6A9EC6;
+  font-size:28px;
+  color:#7FAFD4;
 }
 
-.nav-links a{
+.top-links a{
   margin-left:28px;
   text-decoration:none;
   color:#333;
@@ -60,124 +50,144 @@ body{
   font-size:16px;
 }
 
-.nav-links a:hover{
+.top-links a:hover,
+.top-links a.active{
   color:#7FAFD4;
 }
 
-.nav-links a.active{
-  color:#7FAFD4;
-}
-  body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 420px;
-  height: 700px;
-
-  background: url("cream-splash3.png") no-repeat left top;
-  background-size: contain;
-
-  opacity: 0.40;
-  pointer-events: none;
-  z-index: -1;
+/* BACKGROUND SPLASHES */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:420px;
+  height:700px;
+  background:url("cream-splash3.png") no-repeat left top;
+  background-size:contain;
+  opacity:0.58;
+  pointer-events:none;
+  z-index:-1;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  right: -40px;
-
-  width: 420px;
-  height: 820px;
-
-  background: url("blue-splash5.png") no-repeat right top;
-  background-size: contain;
-
-  opacity: 0.32;
-  pointer-events: none;
-  z-index: -1;
+body::after{
+  content:"";
+  position:fixed;
+  top:0;
+  right:-55px;
+  width:420px;
+  height:820px;
+  background:url("blue-splash5.png") no-repeat right top;
+  background-size:contain;
+  opacity:0.42;
+  pointer-events:none;
+  z-index:-1;
 }
 
 /* MAIN */
-
 .container{
-  max-width:1100px;
-  margin:auto;
-  padding:80px 24px 60px;
+  max-width:1120px;
+  margin:0 auto;
+  padding:50px 24px 12px;
 }
 
-.about-card{
-  background: transparent;
-  border:none;
-  border-radius:0;
-
-  padding:40px 20px 20px;
-
-  box-shadow:none;
-
+.page-intro{
   text-align:center;
+  max-width:780px;
+  margin:0 auto 28px;
 }
 
-.about-card h1{
-  font-size:52px;
-  margin-bottom:34px;
-  color:#2E73D2;
+.page-intro h1{
+  font-size:38px;
+  color:#2c74c9;
+  margin:0 0 16px;
+  font-weight:800;
+}
 
+.page-intro p{
+  max-width:780px;
+  margin:0 auto;
+  font-size:16.5px;
+  line-height:1.8;
+  color:#356ac3;
+}
+
+/* JOURNEY CARD */
+.journey-card{
+  background:#eaf4fb;
+  border:1px solid #c9ddeb;
+  box-shadow:0 12px 30px rgba(92,130,160,0.12);
+  margin-bottom:90px;
+  padding:30px 30px 34px;
+  border-radius:28px;
+  position:relative;
+}
+
+.journey-card:nth-child(1){
+  background:#eaf4fb;
+}
+
+.journey-card:nth-child(2){
+  background:#edf5fa;
+}
+
+.journey-card:nth-child(3){
+  background:#e8f2fb;
+}
+
+.journey-card::after{
+  content:"✦";
+  position:absolute;
+  top:18px;
+  right:24px;
+  font-size:20px;
+  color:#7FAFD4;
+  opacity:0.65;
+}
+
+.journey-text{
+  background:transparent;
+  padding:0 20px 28px;
+  border-radius:0;
+  text-align:center;
+  font-size:18px;
+  line-height:1.9;
+  color:#284f78;
   font-weight:700;
+  margin-bottom:20px;
 }
 
-.about-card p{
-  font-size:19px;
-  line-height:2;
-
-  color:#2F55A4;
-
-  margin-bottom:28px;
+.journey-collage{
+  width:100%;
+  display:block;
+  border-radius:22px;
+  box-shadow:0 8px 24px rgba(92,130,160,0.12);
 }
 
 /* FOOTER */
-
-.footer-new{
+.footer-art{
   text-align:center;
   padding:42px 20px 34px;
-  background:transparent;
 }
 
-.footer-divider{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:14px;
-}
-
-.footer-divider::before,
-.footer-divider::after{
-  content:"";
-  flex:1;
+.footer-line{
+  width:60%;
   height:1px;
   background:#d6eaf8;
-  margin:0 10px;
+  margin:0 auto 15px;
 }
 
-.footer-divider span{
-  color:#7FAFD4;
-  font-size:14px;
-}
-
-.footer-name{
+.footer-art h3{
   font-family:'Dancing Script', cursive;
-  font-size:26px;
   color:#567A9E;
-  margin:6px 0;
+  margin:10px 0;
+  font-size:26px;
 }
 
-.footer-tagline{
-  font-size:14px;
+.footer-art p{
   color:#5F6F73;
-  margin:6px 0 10px;
-  letter-spacing:0.3px;
+  font-size:14px;
+  margin:5px 0;
 }
 
 .footer-copy{
@@ -187,48 +197,49 @@ body::after {
 }
 
 /* MOBILE */
-
 @media(max-width:768px){
+  .top-nav{
+    flex-direction:column;
+    gap:16px;
+  }
 
-.about-card{
-  padding:50px 28px;
+  .top-links{
+    text-align:center;
+  }
+
+  .top-links a{
+    margin:0 10px;
+    display:inline-block;
+    margin-bottom:8px;
+  }
+
+  .container{
+    padding:48px 18px 20px;
+  }
+
+  .page-intro h1{
+    font-size:34px;
+  }
+
+  .journey-card{
+    padding:26px 18px 28px;
+    margin-bottom:60px;
+  }
+
+  .journey-text{
+    font-size:16px;
+  }
 }
-
-.about-card h1{
-  font-size:40px;
-}
-
-.about-card p{
-  font-size:17px;
-  line-height:1.9;
-}
-
-.nav{
-  flex-direction:column;
-  gap:16px;
-}
-
-.nav-links{
-  text-align:center;
-}
-
-.nav-links a{
-  margin:0 10px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="nav">
+<div class="top-header">
+  <div class="top-nav">
+    <div class="top-logo">Rish Narula</div>
 
-    <div class="logo">Rish Narula</div>
-
-    <nav class="nav-links">
+    <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="author.html">Author</a>
@@ -236,50 +247,56 @@ body::after {
       <a href="performing.html">Performing Arts</a>
       <a href="achievements.html">Achievements</a>
       <a href="journey.html" class="active">Journey</a>
-    </nav>
-
+    </div>
   </div>
-</header>
+</div>
 
 <div class="container">
 
-  <div class="about-card">
-
+  <div class="page-intro">
     <h1>Journey</h1>
-
     <p>
-      Every experience in Rish’s journey is filled with curiosity, creativity, and a desire to explore something new. From stories and artwork to performances and learning adventures, each step reflects his growing imagination and confidence.
+      Every year brings new ideas, new discoveries, and new adventures.
+      These little moments celebrate the memories that make Rish's journey so special.
     </p>
-
-    <p>
-      As he continues discovering his interests, Rish enjoys trying new activities, expressing his ideas, and building meaningful memories through creativity and learning.
-    </p>
-
-    <p>
-      This journey is a collection of moments, achievements, experiences, and passions that together reflect his joyful world of imagination and growth.
-    </p>
-
   </div>
+
+  <main>
+
+    <section class="journey-card">
+      <div class="journey-text">
+        Exploring, imagining, creating, and growing a little more every day.
+      </div>
+
+      <img src="journeyimages/rish-growing-collage.png" alt="Rish growing through creativity" class="journey-collage">
+    </section>
+
+    <section class="journey-card">
+      <div class="journey-text">
+        Rish likes exploring new ideas through playful activities, creative crafts, imaginative projects, and hands-on learning experiences. These joyful moments continue to inspire his artistic and expressive spirit.
+      </div>
+
+      <img src="journeyimages/rish-playful-innovator.png" alt="Rish playful innovator collage" class="journey-collage">
+    </section>
+
+    <section class="journey-card">
+      <div class="journey-text">
+        Rish enjoyed discovering the world around him through curiosity, pretend play, little experiments, and creative adventures from a very young age. His imagination and love for trying new things naturally became a part of his everyday journey.
+      </div>
+
+      <img src="journeyimages/rish-curious-explorer.jpg" alt="Rish curious explorer collage" class="journey-collage">
+    </section>
+
+  </main>
 
 </div>
 
-<footer class="footer-new">
-
-  <div class="footer-divider">
-    <span>✦</span>
-  </div>
-
-  <h3 class="footer-name">Rish Narula</h3>
-
-  <p class="footer-tagline">
-    Exploring creativity with joy
-  </p>
-
-  <p class="footer-copy">
-    © 2026 Rish Narula
-  </p>
-
-</footer>
+<div class="footer-art">
+  <div class="footer-line"></div>
+  <h3>Rish Narula</h3>
+  <p class="footer-tagline">Ideas, adventures, creativity, and curiosity.</p>
+  <p class="footer-copy">© 2026 Rish Narula. All rights reserved.</p>
+</div>
 
 </body>
 </html>
