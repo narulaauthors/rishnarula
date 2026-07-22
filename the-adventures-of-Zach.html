@@ -1,1 +1,1003 @@
-w3ecp23j2ej
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Adventures of Zach | Rish Narula</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Nunito',sans-serif;
+
+background:
+radial-gradient(circle at top right, rgba(173,201,230,.11), transparent 30%),
+radial-gradient(circle at top left, rgba(255,235,214,.14), transparent 24%),
+linear-gradient(to bottom,#fffefb 0%,#f9fbfe 100%);
+
+color:#1e293b;
+
+line-height:1.7;
+
+overflow-x:hidden;
+
+}
+
+a{
+text-decoration:none;
+transition:.3s;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+.container{
+max-width:1180px;
+margin:auto;
+padding:0 24px;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.top-header{
+
+background:rgba(255,255,255,.78);
+
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(0,0,0,.05);
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+box-shadow:0 4px 12px rgba(0,0,0,.04);
+
+}
+
+.top-nav{
+
+max-width:1180px;
+
+margin:auto;
+
+padding:16px 24px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.top-logo{
+
+font-family:'Dancing Script',cursive;
+
+font-size:31px;
+
+font-weight:600;
+
+color:#7FAFD4;
+
+letter-spacing:.3px;
+
+line-height:1;
+
+position:relative;
+
+top:-1px;
+
+}
+
+.top-links{
+
+display:flex;
+
+align-items:center;
+
+gap:28px;
+
+}
+
+.top-links a{
+
+font-family:'Nunito',sans-serif;
+
+font-size:16px;
+
+font-weight:700;
+
+color:#333;
+
+}
+
+.top-links a:hover{
+
+color:#7FAFD4;
+
+}
+
+.top-links a.active{
+
+color:#7FAFD4;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+position:relative;
+
+min-height:100vh;
+
+/* CHANGE ONLY THIS FILE NAME */
+
+background:url("images/zach-hero-final.png") center center/cover no-repeat;
+
+overflow:hidden;
+
+}
+
+/* BUTTON BLOCK */
+
+.hero-buttons{
+
+position:absolute;
+
+right:70px;
+
+top:71%;
+
+transform:translateY(-50%);
+
+width:340px;
+
+text-align:center;
+
+z-index:20;
+
+}
+
+/* BUTTONS */
+
+.hero-btn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:320px;
+
+height:72px;
+
+margin:22px auto;
+
+border-radius:999px;
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:700;
+
+border:2px solid rgba(255,255,255,.20);
+
+box-shadow:
+
+inset 0 2px 10px rgba(255,255,255,.15),
+
+0 10px 30px rgba(0,0,0,.35);
+
+transition:.25s;
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.hero-btn.india{
+
+background:linear-gradient(180deg,#2d7df2 0%,#1f57c6 100%);
+
+}
+
+.hero-btn.global{
+
+background:linear-gradient(180deg,#5aa2ff 0%,#2d72dd 100%);
+
+}
+
+.hero-btn.sample{
+
+background:linear-gradient(180deg,#355fc8 0%,#233f8f 100%);
+
+}
+
+.hero-note{
+
+margin-top:24px;
+
+font-size:17px;
+
+line-height:1.75;
+
+color:#ffffff;
+
+text-align:center;
+
+text-shadow:0 2px 8px rgba(0,0,0,.45);
+
+}
+
+.hero-note strong{
+
+color:#ffffff;
+
+}
+  /* ===========================
+   STORY SECTION
+=========================== */
+
+.zach-story-section{
+
+max-width:1200px;
+
+margin:80px auto 100px;
+
+padding:60px 70px 70px;
+
+background:linear-gradient(
+180deg,
+#f8fbff 0%,
+#edf5fc 100%
+);
+
+border-radius:30px;
+
+box-shadow:0 18px 45px rgba(70,110,170,.10);
+
+}
+
+.zach-title{
+
+font-family:'Cormorant Garamond',serif;
+
+text-align:center;
+
+font-size:52px;
+
+font-weight:600;
+
+letter-spacing:3px;
+
+color:#2b6fc8;
+
+margin-bottom:18px;
+
+}
+
+.zach-tagline{
+
+max-width:760px;
+
+margin:0 auto 36px;
+
+text-align:center;
+
+font-size:18px;
+
+line-height:1.85;
+
+color:#487bc8;
+
+}
+
+.zach-content{
+
+display:grid;
+
+grid-template-columns:360px 1fr;
+
+gap:60px;
+
+align-items:start;
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.zach-left{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+align-items:flex-start;
+
+}
+
+.book-cover{
+
+width:165px;
+
+border-radius:12px;
+
+box-shadow:0 14px 32px rgba(60,90,150,.18);
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.book-cover:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 22px 42px rgba(60,90,150,.22);
+
+}
+
+.second-book{
+
+margin:0;
+
+}
+
+.zach-right{
+
+max-width:620px;
+
+}
+
+.zach-right p{
+
+font-size:20px;
+
+line-height:2;
+
+color:#4d678d;
+
+margin:0;
+
+}
+
+.zach-author{
+
+margin-top:34px;
+
+padding-top:24px;
+
+border-top:1px solid #d6e7f5;
+
+}
+
+.zach-author span{
+
+display:block;
+
+font-size:14px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#5b8dd4;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+}
+
+.zach-author h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:30px;
+
+font-weight:600;
+
+color:#2f6fc7;
+
+}
+
+/* ===========================
+LIGHTBOX
+=========================== */
+
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.82);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+cursor:pointer;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:12px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+.footer-art{
+
+text-align:center;
+
+padding:50px 20px 40px;
+
+}
+
+.footer-line{
+
+width:60%;
+
+height:1px;
+
+background:#d6eaf8;
+
+margin:0 auto 20px;
+
+}
+
+.footer-art h3{
+
+font-family:'Dancing Script',cursive;
+
+font-size:30px;
+
+color:#7FAFD4;
+
+margin-bottom:10px;
+
+}
+
+.footer-art p{
+
+font-size:14px;
+
+color:#777;
+
+margin:6px 0;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:980px){
+
+.hero{
+
+min-height:auto;
+
+padding-bottom:40px;
+
+background-position:top center;
+
+}
+
+.hero-buttons{
+
+position:static;
+
+transform:none;
+
+width:100%;
+
+max-width:360px;
+
+margin:30px auto 0;
+
+padding:0 20px;
+
+}
+
+.hero-btn{
+
+width:100%;
+
+}
+
+.zach-story-section{
+
+margin:65px 24px 85px;
+
+padding:55px 40px 60px;
+
+}
+
+.zach-content{
+
+grid-template-columns:260px minmax(0,1fr);
+
+gap:45px;
+
+}
+
+.book-cover{
+
+width:150px;
+
+}
+
+.zach-title{
+
+font-size:44px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.top-nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.top-links{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero{
+
+min-height:auto;
+
+background-size:100% auto;
+
+background-repeat:no-repeat;
+
+background-position:top center;
+
+padding-top:56%;
+
+padding-bottom:35px;
+
+background-color:#09111f;
+
+}
+
+.hero-buttons{
+
+position:static;
+
+transform:none;
+
+width:100%;
+
+max-width:360px;
+
+margin:25px auto 0;
+
+padding:0 18px;
+
+}
+
+.hero-btn{
+
+width:100%;
+
+height:62px;
+
+margin:14px auto;
+
+font-size:17px;
+
+}
+
+.hero-note{
+
+margin-top:24px;
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+.zach-story-section{
+
+margin:55px 16px 70px;
+
+padding:42px 22px 48px;
+
+border-radius:24px;
+
+}
+
+.zach-content{
+
+display:flex;
+
+flex-direction:column;
+
+gap:38px;
+
+}
+
+.zach-left{
+
+width:100%;
+
+gap:25px;
+
+}
+
+.book-cover{
+
+width:230px;
+
+}
+
+.zach-right{
+
+text-align:center;
+
+}
+
+.zach-right p{
+
+font-size:17px;
+
+line-height:1.85;
+
+margin-bottom:18px;
+
+}
+
+.zach-author{
+
+margin-top:30px;
+
+padding-top:24px;
+
+text-align:center;
+
+}
+
+.zach-author h3{
+
+font-size:28px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+  <body>
+
+<!-- ==========================
+     HEADER
+=========================== -->
+
+<header class="top-header">
+
+    <div class="top-nav">
+
+        <a href="index.html" class="top-logo">
+            Rish Narula
+        </a>
+
+        <nav class="top-links">
+
+             <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="author.html" >Author</a>
+      <a href="art.html">Art</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="journey.html">Journey</a>
+<a href="the-adventures-of-Zach.html" class="active">
+    The Adventures Of Zach
+</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==========================
+     HERO
+=========================== -->
+
+<section class="hero">
+
+    <div class="hero-buttons">
+
+        <a href="#"
+           class="hero-btn india">
+            Buy on Amazon India
+        </a>
+
+        <a href="#"
+           class="hero-btn global">
+            Buy on Amazon Global
+        </a>
+
+        <a href="#"
+           class="hero-btn sample">
+            Read a Sample
+        </a>
+
+        <div class="hero-note">
+
+            <strong>Coming July 2026</strong>
+
+            <br>
+
+            A fun-filled graphic novel full of humour,
+
+            mystery and unforgettable adventures.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================
+     STORY SECTION
+=========================== -->
+
+<section class="zach-story-section">
+
+    <h2 class="zach-title">
+
+        THE ADVENTURES OF ZACH
+
+    </h2>
+
+    <p class="zach-tagline">
+
+        Join Zach on an exciting adventure filled with
+        mystery, imagination and unexpected twists.
+        This graphic novel is created especially for
+        young readers who love fun, action and laughter.
+
+    </p>
+
+    <div class="zach-content">
+
+        <div class="zach-left">
+
+            <img src="images/zach-cover.jpg"
+                 alt="The Adventures of Zach Cover"
+                 class="book-cover">
+
+            <img src="images/zach-back.jpg"
+                 alt="Back Cover"
+                 class="book-cover second-book">
+
+        </div>
+
+        <div class="zach-right">
+
+            <p>
+
+                Placeholder description.
+
+                <br><br>
+
+                We'll later replace this with the actual
+                synopsis of the graphic novel after launch.
+
+                <br><br>
+
+                This section is intentionally designed
+                exactly like the Ishimiko page so both
+                websites maintain a consistent premium look.
+
+            </p>
+
+            <div class="zach-author">
+
+                <span>Created by</span>
+
+                <h3>Rish Narula</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ==========================
+     FOOTER
+=========================== -->
+
+<footer class="footer-art">
+
+    <div class="footer-line"></div>
+
+    <h3>Rish Narula</h3>
+
+    <p>
+        Every story begins with imagination,
+        curiosity, and the courage to create.
+    </p>
+
+    <p>
+        © 2026 Rish Narula. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- ==========================
+     LIGHTBOX
+=========================== -->
+
+<div class="lightbox" id="lightbox">
+
+    <img id="lightbox-image" src="" alt="Book Preview">
+
+</div>
+
+
+
+<script>
+
+/* ==========================
+   IMAGE LIGHTBOX
+========================== */
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+
+document.querySelectorAll(".book-cover").forEach(image=>{
+
+    image.addEventListener("click",()=>{
+
+        lightbox.style.display="flex";
+
+        lightboxImage.src=image.src;
+
+    });
+
+});
+
+lightbox.addEventListener("click",()=>{
+
+    lightbox.style.display="none";
+
+});
+
+
+
+/* ==========================
+   HERO BUTTON PLACEHOLDERS
+========================== */
+
+document.querySelector(".hero-btn.india").addEventListener("click",function(e){
+
+    e.preventDefault();
+
+    alert("Amazon India link coming soon.");
+
+});
+
+document.querySelector(".hero-btn.global").addEventListener("click",function(e){
+
+    e.preventDefault();
+
+    alert("Worldwide Amazon link coming soon.");
+
+});
+
+document.querySelector(".hero-btn.sample").addEventListener("click",function(e){
+
+    e.preventDefault();
+
+    alert("Sample preview coming soon.");
+
+});
+
+
+
+/* ==========================
+   OPTIONAL HEADER SHADOW
+========================== */
+
+window.addEventListener("scroll",()=>{
+
+    const header=document.querySelector(".top-header");
+
+    if(window.scrollY>30){
+
+        header.style.boxShadow="0 10px 28px rgba(0,0,0,.08)";
+
+    }else{
+
+        header.style.boxShadow="0 4px 12px rgba(0,0,0,.04)";
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
