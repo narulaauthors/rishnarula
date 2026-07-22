@@ -311,15 +311,18 @@ color:#ffffff;
 
     display:block;
 
-    font-size:52px;
+    font-size:46px;
 
     font-weight:600;
 
-    letter-spacing:4px;
+    letter-spacing:1.5px;
+
+    line-height:1.1;
 
     color:#2b6fc8;
 
     margin:0 0 18px;
+
 }
 
 .zach-tagline{
@@ -583,7 +586,44 @@ margin:65px 24px 85px;
 padding:55px 40px 60px;
 
 }
+.zach-story-section::before,
+.zach-story-section::after{
 
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    z-index:-1;
+
+}
+
+.zach-story-section::before{
+
+    top:-80px;
+
+    left:-100px;
+
+    background:rgba(255,227,198,.50);
+
+}
+
+.zach-story-section::after{
+
+    bottom:-90px;
+
+    right:-100px;
+
+    background:rgba(193,222,255,.50);
+
+}
 .zach-content{
 
 grid-template-columns:260px minmax(0,1fr);
@@ -901,24 +941,29 @@ font-size:28px;
      FOOTER
 =========================== -->
 
-<footer class="footer-art">
+<footer class="footer-new">
+  <div class="footer-inner">
 
-    <div class="footer-line"></div>
+    <div class="footer-divider">
+      <span>✦</span>
+    </div>
 
-    <h3>Rish Narula</h3>
+    <h3 class="footer-name">Rish Narula</h3>
 
-    <p>
-        Every story begins with imagination,
-        curiosity, and the courage to create.
+    <p class="footer-tagline">
+      Exploring creativity with joy
     </p>
 
-    <p>
-        © 2026 Rish Narula. All Rights Reserved.
+    <p class="footer-copy">
+      © <span id="year"></span> Rish Narula
     </p>
 
+  </div>
 </footer>
 
-
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 <!-- ==========================
      LIGHTBOX
